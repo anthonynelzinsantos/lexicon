@@ -1,0 +1,21 @@
+{{!< default}}
+
+<main id="main">
+	<article class="article {{post_class}}">
+		<header class="header">
+			{{#post}}<h1 class="title">{{title}}</h1>{{/post}}
+			
+			<div class="deck">
+				{{#get "posts" limit="all"}}{{plural pagination.total empty="0 billet" singular="% billet" plural="% billets"}}{{/get}}
+			</div>
+		</header>
+		
+		<section class="content">
+			{{#get "posts" limit="all"}}
+                {{#foreach posts}}
+                    {{> loop}}
+                {{/foreach}}
+            {{/get}}
+		</section>
+	</article>
+</main>

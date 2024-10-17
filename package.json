@@ -1,0 +1,61 @@
+{
+    "name": "lexicon",
+    "description": "A Ghost theme",
+    "version": "1.0.1",
+    "private": true,
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+    "license": "EUPL",
+    "author": {
+        "name": "Anthony Nelzin-Santos",
+        "email": "anthony@nelzin.fr",
+        "url": "https://www.a17s.net/"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "docs": "",
+    "config": {
+        "posts_per_page": 1,
+        "image_sizes": {
+        	"s": {
+                "width": 450
+            },
+            "m": {
+                "width": 900
+            },
+            "l": {
+                "width": 1350
+            },
+            "xl": {
+                "width": 1800
+            }
+        },
+        "card_assets": true
+    },
+    "scripts": {
+        "dev": "gulp",
+        "test": "gscan .",
+        "zip": "gulp zip"
+    },
+    "devDependencies": {
+        "@tryghost/shared-theme-assets": "2.4.5",
+        "autoprefixer": "10.4.20",
+        "beeper": "2.1.0",
+        "cssnano": "7.0.6",
+        "gscan": "4.43.5",
+        "gulp": "5.0.0",
+        "gulp-concat": "2.6.1",
+        "gulp-livereload": "4.0.2",
+        "gulp-postcss": "10.0.0",
+        "gulp-uglify": "3.0.2",
+        "gulp-zip": "5.1.0",
+        "ordered-read-streams": "2.0.0",
+        "postcss": "8.4.47",
+        "postcss-easy-import": "4.0.0",
+        "pump": "3.0.2"
+    }
+}

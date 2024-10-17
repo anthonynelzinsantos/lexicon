@@ -1,0 +1,27 @@
+{{!< default}}
+
+<main id="main">
+	{{#tag}}
+	<article class="article">
+		<header class="header">
+			<h1 class="title">{{name}}</h1>
+			
+			<div class="deck">
+                {{#if description}}
+                    {{description}}
+                {{else}}
+                    {{plural ../pagination.total empty="0 billet" singular="% billet" plural="% billets"}}
+                {{/if}}
+            </div>
+		</header>
+		
+		<section class="content">
+			{{#get "posts" filter="tags:{{slug}}" limit="all"}}
+                {{#foreach posts}}
+                    {{> loop}}
+                {{/foreach}}
+            {{/get}}
+		</section>
+    </article>
+    {{/tag}}
+</main>

@@ -1,0 +1,36 @@
+{{> "feature-image"}}
+
+<header class="header">
+	<h1 class="title">{{title}}</h1>
+
+    <div class="meta">
+    	{{tags}}, le
+        <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date locale="fr-fr" format="D MMMM Y"}}</time>
+    </div>
+
+    {{#if custom_excerpt}}
+        <div class="deck">
+        	{{custom_excerpt}}
+        </div>
+    {{/if}}
+</header>
+
+<section class="content">
+    {{content}}
+</section>
+
+<footer class="footer">
+    <nav class="navigation">
+        <div class="previous">
+            {{#prev_post}}
+                ←&nbsp;<a href="{{url}}" title="{{title}}" rel="prev" data-theme="{{date format="MM"}}">{{title}}</a>
+            {{/prev_post}}
+        </div>
+
+        <div class="next">
+            {{#next_post}}
+                <a href="{{url}}" title="{{title}}" rel="next" data-theme="{{date format="MM"}}">{{title}}</a>&nbsp;→
+            {{/next_post}}
+        </div>
+    </nav>
+</footer>

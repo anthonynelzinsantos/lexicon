@@ -1,0 +1,32 @@
+{{#if feature_image}}
+    <figure class="hero">
+    	<picture>
+    		<source 
+				srcset="{{img_url feature_image size="s" format="avif"}} 450w,
+						{{img_url feature_image size="m" format="avif"}} 900w,
+						{{img_url feature_image size="l" format="avif"}} 1350w,
+						{{img_url feature_image size="xl" format="avif"}} 1800w" 
+				type="image/avif"
+			>
+			<source 
+				srcset="{{img_url feature_image size="s" format="webp"}} 450w,
+						{{img_url feature_image size="m" format="webp"}} 900w,
+						{{img_url feature_image size="l" format="webp"}} 1350w,
+						{{img_url feature_image size="xl" format="webp"}} 1800w"
+				type="image/webp"
+			>
+			<img
+            srcset="{{img_url feature_image size="s"}} 450w,
+            		{{img_url feature_image size="m"}} 900w,
+                    {{img_url feature_image size="l"}} 1350w,
+                    {{img_url feature_image size="xl"}} 1800w"
+            src="{{img_url feature_image size="xl"}}"
+            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+        >
+    	</picture>
+        
+        {{#if feature_image_caption}}
+            <figcaption>{{feature_image_caption}}</figcaption>
+        {{/if}}
+    </figure>
+{{/if}}

@@ -1,0 +1,9 @@
+{{!< default}}
+
+<main id="main">
+    {{#foreach posts limit="1"}}
+        <article class="article {{post_class}}">
+            {{> content}}
+        </article>
+    {{/foreach}}
+</main>

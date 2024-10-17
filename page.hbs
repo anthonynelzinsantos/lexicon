@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{#post}}
+
+<main id="main">
+	<article class="article {{post_class}}">
+		{{#match @page.show_title_and_feature_image}}
+		{{> "feature-image"}}
+		
+		<header class="header">
+			<h1 class="title">{{title}}</h1>
+		</header>
+		{{/match}}
+	
+		<section class="content">
+    		{{content}}
+		</section>
+	</article>
+</main>
+
+{{/post}}

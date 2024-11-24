@@ -48,100 +48,111 @@
 }
 
 [data-theme="01"] {
-	--color-border: lch(0% 100 300);
-	--color-hover: lch(45% 100 300);
+	--color-border: lch(10% 80 300);
+	--color-hover: lch(10% 80 300);
+	--color-markup: lch(30% 80 300);
+	--color-shadow: lch(20% 80 300);
 	
-	--color-markup: lch(35% 100 300);
-	--color-shadow: lch(10% 75 300);
-	--color-theme: lch(20% 75 300);
+	--color-theme: lch(40% 80 300);
 }
 
 [data-theme="02"] {
-	--color-border: lch(0% 100 280);
-	--color-hover: lch(45% 100 280);
-	--color-markup: lch(35% 100 280);
-	--color-shadow: lch(10% 60 280);
-	--color-theme: lch(20% 60 280);
+	--color-border: lch(10% 80 285);
+	--color-hover: lch(15% 80 285);
+	--color-markup: lch(35% 80 285);
+	--color-shadow: lch(25% 80 285);
+	
+	--color-theme: lch(45% 80 285);
 }
 
 [data-theme="03"] {
-	--color-border: lch(10% 100 260);
-	--color-hover: lch(45% 100 260);
-	--color-markup: lch(35% 100 260);
-	--color-shadow: lch(10% 60 260);
-	--color-theme: lch(30% 60 260);
+	--color-border: lch(10% 55 260);
+	--color-hover: lch(30% 55 260);
+	--color-markup: lch(50% 55 260);
+	--color-shadow: lch(40% 55 260);
+	
+	--color-theme: lch(60% 55 260);
 }
 
 [data-theme="04"] {
-	--color-border: lch(15% 100 200);
-	--color-hover: lch(45% 100 200);
-	--color-markup: lch(35% 100 200);
-	--color-shadow: lch(10% 25 200);
-	--color-theme: lch(35% 25 200);
+	--color-border: lch(10% 40 205);
+	--color-hover: lch(40% 40 205);
+	--color-markup: lch(60% 40 205);
+	--color-shadow: lch(50% 40 205);
+	
+	--color-theme: lch(70% 40 205);
 }
 
 [data-theme="05"] {
-	--color-border: lch(10% 100 175);
-	--color-hover: lch(45% 100 175);
-	--color-markup: lch(35% 100 175);
-	--color-shadow: lch(10% 25 175);
-	--color-theme: lch(30% 25 175);
+	--color-border: lch(10% 50 165);
+	--color-hover: lch(40% 50 165);
+	--color-markup: lch(60% 50 165);
+	--color-shadow: lch(50% 50 165);
+	
+	--color-theme: lch(70% 50 165);
 }
 
 [data-theme="06"] {
-	--color-border: lch(20% 100 140);
-	--color-hover: lch(45% 100 140);
-	--color-markup: lch(35% 100 140);
-	--color-shadow: lch(10% 45 140);
-	--color-theme: lch(40% 45 140);
+	--color-border: lch(10% 70 140);
+	--color-hover: lch(40% 70 140);
+	--color-markup: lch(60% 70 140);
+	--color-shadow: lch(50% 70 140);
+	
+	--color-theme: lch(70% 70 140);
 }
 
 [data-theme="07"] {
-	--color-border: lch(50% 100 100);
-	--color-hover: lch(55% 100 100);
-	--color-markup: lch(45% 100 100);
-	--color-shadow: lch(45% 75 100);
-	--color-theme: lch(75% 75 100);
+	--color-border: lch(10% 75 115);
+	--color-hover: lch(45% 75 115);
+	--color-markup: lch(65% 75 115);
+	--color-shadow: lch(55% 75 115);
+	
+	--color-theme: lch(75% 75 115);
 }
 
 [data-theme="08"] {
-	--color-border: lch(50% 100 60);
-	--color-hover: lch(55% 100 60);
-	--color-markup: lch(45% 100 60);
-	--color-shadow: lch(40% 85 60);
-	--color-theme: lch(70% 85 60);
+	--color-border: lch(10% 80 80);
+	--color-hover: lch(50% 80 80);
+	--color-markup: lch(70% 80 80);
+	--color-shadow: lch(60% 80 80);
+	
+	--color-theme: lch(80% 80 80);
 }
 
 [data-theme="09"] {
-	--color-border: lch(25% 100 40);
-	--color-hover: lch(45% 100 40);
-	--color-markup: lch(35% 100 40);
-	--color-shadow: lch(15% 75 40);
-	--color-theme: lch(45% 75 40);
+	--color-border: lch(10% 85 60);
+	--color-hover: lch(40% 85 60);
+	--color-markup: lch(60% 85 60);
+	--color-shadow: lch(50% 85 60);
+	
+	--color-theme: lch(70% 85 60);
 }
 
 [data-theme="10"] {
-	--color-border: lch(25% 100 20);
-	--color-hover: lch(45% 100 20);
-	--color-markup: lch(35% 100 20);
-	--color-shadow: lch(15% 50 20);
-	--color-theme: lch(45% 75 20);
+	--color-border: lch(10% 90 40);
+	--color-hover: lch(15% 90 40);
+	--color-markup: lch(35% 90 40);
+	--color-shadow: lch(25% 90 40);
+	
+	--color-theme: lch(45% 90 40);
 }
 
 [data-theme="11"] {
-	--color-border: lch(10% 100 355);
-	--color-hover: lch(45% 100 355);
-	--color-markup: lch(35% 100 355);
-	--color-shadow: lch(10% 50 355);
-	--color-theme: lch(30% 50 355);
+	--color-border: lch(10% 85 350);
+	--color-hover: lch(10% 85 350);
+	--color-markup: lch(20% 85 350);
+	--color-shadow: lch(10% 85 350);
+	
+	--color-theme: lch(30% 85 350);
 }
 
 [data-theme="12"] {
-	--color-border: lch(0% 100 310);
-	--color-hover: lch(45% 100 310);
-	--color-markup: lch(35% 100 310);
-	--color-shadow: lch(10% 70 310);
-	--color-theme: lch(20% 70 310);
+	--color-border: lch(10% 85 310);
+	--color-hover: lch(10% 85 310);
+	--color-markup: lch(30% 85 310);
+	--color-shadow: lch(20% 85 310);
+	
+	--color-theme: lch(40% 85 310);
 }
 
 ::marker {

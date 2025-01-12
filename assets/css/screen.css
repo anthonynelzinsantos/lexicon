@@ -233,6 +233,12 @@ a:focus,
 a:hover {
 	background: var(--color-hover);
 	color: var(--color-bg);
+	
+	& *::after,
+	& *::before {
+		color: var(--color-bg) !important;
+		transition: color .1s linear;
+	}
 }
 
 a.icon:focus,
@@ -350,7 +356,7 @@ h1,
 			}
 			
 			& blockquote {
-				margin: var(--space-s) min(4vw, 4ch) var(--space-s) min(4vw, 4ch);
+				margin: var(--space-s) 4ch var(--space-s) 4ch;
 				padding: 0 0 0 2ch;
 				position: relative;
 			}
@@ -367,15 +373,16 @@ h1,
 				width: 1ch;
 			}
 			
-			& blockquote p:last-of-type {
-				color: var(--color-muted);
-				margin: 1.75em 0 0 0;
-				text-indent: 0;
-			}
-			
 			& code {
 				font-family: var(--font);
-				font-style: italic;
+				font-weight: normal;
+			}
+			
+			& :not(pre) > code::before,
+			& :not(pre) > code::after {
+				color: var(--color-markup);
+				content: "`";
+				display: inline;
 			}
 			
 			& em,
@@ -460,12 +467,13 @@ h1,
 			}
 			
 			& p + p {
-				text-indent: min(4vw, 4ch);
-				margin: 0 0 0 0;
+				margin: var(--space-s) 0 0 0;
 			}
 			
 			& pre {
-				margin: var(--space-s) 0 var(--space-s) min(4vw, 4ch);
+				border: 2px dashed var(--color-markup);
+				margin: var(--space-s) 0 var(--space-s) 0;
+				padding: 2ch 2ch 2ch 2ch;
 			}
 			
 			& s {
@@ -482,7 +490,7 @@ h1,
 			& b::before,
 			& b::after {
 				color: var(--color-markup);
-				content: "__";
+				content: "_";
 				display: inline;
 			}
 			
@@ -496,7 +504,24 @@ h1,
 			}
 			
 			& table {
+				border-collapse: collapse;
 				margin: var(--space-s) 0 var(--space-s) 0;
+				text-align: center;
+				width: 100%;
+				
+				& thead {
+					border-bottom: 2px dashed var(--color-markup);
+				}
+				
+				& td, th {
+					border: 2px dashed var(--color-markup);
+					font-weight: normal;
+					padding: 1ch 0 1ch 0;
+				}
+				
+				& th {
+					text-transform: uppercase;
+				}
 			}
 			
 			& ul {

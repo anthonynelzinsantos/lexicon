@@ -609,11 +609,15 @@ h1,
 			fill: var(--color-markup);
 			height: var(--space-2xl);
 			width: var(--space-2xl);
+			
+			&:hover {
+				color: var(--color-hover);
+				fill: var(--color-hover);
+			}
 		}
 	}
 	
 	& .channels {
-		color: var(--color-theme);
 		display: flex;
 			gap: var(--space-s);
 			justify-content: center;

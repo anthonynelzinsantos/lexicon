@@ -7,7 +7,11 @@
         "ghost": ">=5.0.0"
     },
     "license": "EUPL-1.2",
-    "author": "Anthony Nelzin-Santos <anthony@nelzin.fr> (https://www.a17s.net/)",
+    "author": {
+    	"email": "anthony@nelzin.fr",
+    	"name": "Anthony Nelzin-Santos",
+    	"website": "https://a17s.net/"
+    },
     "keywords": [
         "ghost",
         "theme",

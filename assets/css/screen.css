@@ -48,99 +48,110 @@
 }
 
 [data-theme="01"] {
-	--blockquote: lch(70% 75 300 / 10%);
-	--link: lch(30% 85 300 / 10%);
-	--markup: lch(30% 80 300);
+	--blockquote: lch(80% 50 300 / 10%);
+	--hover: lch(10% 80 300);
+	--link: lch(80% 30 300);
+	--markup: lch(20% 85 300);
 	--shadow: lch(20% 80 300);
 	
 	--theme: lch(40% 80 300);
 }
 
 [data-theme="02"] {
-	--blockquote: lch(70% 75 285 / 10%);
-	--link: lch(30% 85 285 / 10%);
-	--markup: lch(35% 80 285);
+	--blockquote: lch(80% 50 285 / 10%);
+	--hover: lch(15% 80 285);
+	--link: lch(80% 30 285);
+	--markup: lch(20% 85 285);
 	--shadow: lch(25% 80 285);
 	
 	--theme: lch(45% 80 285);
 }
 
 [data-theme="03"] {
-	--blockquote: lch(70% 75 260 / 10%);
-	--link: lch(30% 85 260 / 10%);
-	--markup: lch(50% 55 260);
+	--blockquote: lch(80% 50 260 / 10%);
+	--hover: lch(30% 55 260);
+	--link: lch(80% 30 260);
+	--markup: lch(20% 85 260);
 	--shadow: lch(40% 55 260);
 	
 	--theme: lch(60% 55 260);
 }
 
 [data-theme="04"] {
-	--blockquote: lch(70% 75 205 / 10%);
-	--link: lch(30% 85 205 / 10%);
-	--markup: lch(60% 40 205);
+	--blockquote: lch(80% 50 205 / 10%);
+	--hover: lch(40% 40 205);
+	--link: lch(80% 30 205);
+	--markup: lch(20% 85 205);
 	--shadow: lch(50% 40 205);
 	
 	--theme: lch(70% 40 205);
 }
 
 [data-theme="05"] {
-	--blockquote: lch(70% 75 165 / 10%);
-	--link: lch(30% 85 165 / 10%);
-	--markup: lch(60% 50 165);
+	--blockquote: lch(80% 50 165 / 10%);
+	--hover: lch(40% 50 165);
+	--link: lch(80% 30 165);
+	--markup: lch(20% 85 165);
 	--shadow: lch(50% 50 165);
 	
 	--theme: lch(70% 50 165);
 }
 
 [data-theme="06"] {
-	--blockquote: lch(70% 75 140 / 10%);
-	--link: lch(30% 85 140 / 10%);
-	--markup: lch(60% 70 140);
+	--blockquote: lch(80% 50 140 / 10%);
+	--hover: lch(40% 70 140);
+	--link: lch(80% 30 140);
+	--markup: lch(20% 85 140);
 	--shadow: lch(50% 70 140);
 	
 	--theme: lch(70% 70 140);
 }
 
 [data-theme="07"] {
-	--blockquote: lch(70% 75 115 / 10%);
-	--link: lch(30% 85 115 / 10%);
-	--markup: lch(65% 75 115);
+	--blockquote: lch(80% 50 115 / 10%);
+	--hover: lch(45% 75 115);
+	--link: lch(80% 30 115);
+	--markup: lch(20% 85 115);
 	--shadow: lch(55% 75 115);
 	
 	--theme: lch(75% 75 115);
 }
 
 [data-theme="08"] {
-	--blockquote: lch(70% 75 80 / 10%);
-	--link: lch(30% 85 80 / 10%);
-	--markup: lch(70% 80 80);
+	--blockquote: lch(80% 50 80 / 10%);
+	--hover: lch(50% 80 80);
+	--link: lch(80% 30 80);
+	--markup: lch(20% 85 80);
 	--shadow: lch(60% 80 80);
 	
 	--theme: lch(80% 80 80);
 }
 
 [data-theme="09"] {
-	--blockquote: lch(70% 75 60 / 10%);
+	--blockquote: lch(80% 50 60 / 10%);
 	--hover: lch(40% 85 60);
-	--link: lch(30% 85 60 / 10%);
-	--markup: lch(60% 85 60);
+	--hover: lch(40% 85 60);
+	--link: lch(80% 30 60);
+	--markup: lch(20% 85 60);
 	--shadow: lch(50% 85 60);
 	
 	--theme: lch(70% 85 60);
 }
 
 [data-theme="10"] {
-	--blockquote: lch(70% 75 40 / 10%);
-	--link: lch(30% 85 40 / 10%);
-	--markup: lch(35% 90 40);
+	--blockquote: lch(80% 50 40 / 10%);
+	--hover: lch(15% 90 40);
+	--link: lch(80% 30 40);
+	--markup: lch(20% 85 40);
 	--shadow: lch(25% 90 40);
 	
 	--theme: lch(45% 90 40);
 }
 
 [data-theme="11"] {
-	--blockquote: lch(70% 75 350 / 10%);
-	--link: lch(30% 85 350 / 10%);
+	--blockquote: lch(80% 50 350 / 10%);
+	--hover: lch(10% 85 350);
+	--link: lch(80% 30 350);
 	--markup: lch(20% 85 350);
 	--shadow: lch(10% 85 350);
 	
@@ -148,9 +159,10 @@
 }
 
 [data-theme="12"] {
-	--blockquote: lch(70% 75 310 / 10%);
-	--link: lch(30% 85 310 / 10%);
-	--markup: lch(30% 85 310);
+	--blockquote: lch(80% 50 310 / 10%);
+	--hover: lch(10% 85 310);
+	--link: lch(30% 85 310);
+	--markup: lch(20% 85 310);
 	--shadow: lch(20% 85 310);
 	
 	--theme: lch(40% 85 310);
@@ -202,7 +214,7 @@ body {
 a {
 	color: inherit;
 	text-decoration: underline;
-		text-decoration-color: var(--link);
+		text-decoration-color: lch(from var(--link) l c h / 50%);
 		text-decoration-skip-ink: none;
 		text-decoration-thickness: var(--space-2xs);
 		text-underline-offset: calc(-1 * var(--space-3xs));
@@ -211,13 +223,14 @@ a {
 a:focus,
 a:hover {
 	background: var(--link);
+	color: var(--markup);
 	text-decoration: none;
 }
 
 a.icon {
 	& svg {
-		color: var(--markup);
-		fill: var(--markup);
+		color: var(--hover);
+		fill: var(--hover);
 		transition: color .1s linear, transform .1s ease;
 	}
 	
@@ -229,8 +242,8 @@ a.icon {
 		cursor: pointer;
 		
 		& svg {
-			color: var(--hover);
-			fill: var(--hover);
+			color: var(--markup);
+			fill: var(--markup);
 			transform: scale(128%);
 		}
 	}
@@ -242,7 +255,7 @@ figure {
 
 	& figcaption {
 		color: var(--captions);
-		margin: 0 0 0 min(4vw, 4ch);
+		text-align: right;
 	}
 
 	& img,
@@ -560,7 +573,6 @@ h1,
 
 #footer {
 	grid-column: 1 / -1;
-	margin: var(--space-xl) 0 0 0;
 	text-align: center;
 	
 	& .navigation {
@@ -580,14 +592,14 @@ h1,
 	
 	& .logo {
 		& svg {
-			color: var(--markup);
-			fill: var(--markup);
+			color: var(--hover);
+			fill: var(--hover);
 			height: var(--space-2xl);
 			width: var(--space-2xl);
 			
 			&:hover {
-				color: var(--hover);
-				fill: var(--hover);
+				color: var(--markup);
+				fill: var(--markup);
 			}
 		}
 	}

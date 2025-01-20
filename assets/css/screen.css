@@ -34,6 +34,7 @@
     --font: "Typewriter", monospace;
     --body: lch(96% 5 90);
     --captions: lch(40% 15 90);
+    --code: lch(90% 5 90);
     --text: lch(10% 100 90);
     --space-3xs: clamp(0.25rem, 0.2188rem + 0.1563vw, 0.3125rem);
     --space-2xs: clamp(0.5rem, 0.4688rem + 0.1563vw, 0.5625rem);
@@ -48,7 +49,6 @@
 
 [data-theme="01"] {
 	--blockquote: lch(70% 75 300 / 10%);
-	--border: lch(10% 80 300);
 	--link: lch(30% 85 300 / 10%);
 	--markup: lch(30% 80 300);
 	--shadow: lch(20% 80 300);
@@ -58,7 +58,6 @@
 
 [data-theme="02"] {
 	--blockquote: lch(70% 75 285 / 10%);
-	--border: lch(10% 80 285);
 	--link: lch(30% 85 285 / 10%);
 	--markup: lch(35% 80 285);
 	--shadow: lch(25% 80 285);
@@ -68,7 +67,6 @@
 
 [data-theme="03"] {
 	--blockquote: lch(70% 75 260 / 10%);
-	--border: lch(10% 55 260);
 	--link: lch(30% 85 260 / 10%);
 	--markup: lch(50% 55 260);
 	--shadow: lch(40% 55 260);
@@ -78,7 +76,6 @@
 
 [data-theme="04"] {
 	--blockquote: lch(70% 75 205 / 10%);
-	--border: lch(10% 40 205);
 	--link: lch(30% 85 205 / 10%);
 	--markup: lch(60% 40 205);
 	--shadow: lch(50% 40 205);
@@ -88,7 +85,6 @@
 
 [data-theme="05"] {
 	--blockquote: lch(70% 75 165 / 10%);
-	--border: lch(10% 50 165);
 	--link: lch(30% 85 165 / 10%);
 	--markup: lch(60% 50 165);
 	--shadow: lch(50% 50 165);
@@ -98,7 +94,6 @@
 
 [data-theme="06"] {
 	--blockquote: lch(70% 75 140 / 10%);
-	--border: lch(10% 70 140);
 	--link: lch(30% 85 140 / 10%);
 	--markup: lch(60% 70 140);
 	--shadow: lch(50% 70 140);
@@ -108,7 +103,6 @@
 
 [data-theme="07"] {
 	--blockquote: lch(70% 75 115 / 10%);
-	--border: lch(10% 75 115);
 	--link: lch(30% 85 115 / 10%);
 	--markup: lch(65% 75 115);
 	--shadow: lch(55% 75 115);
@@ -118,7 +112,6 @@
 
 [data-theme="08"] {
 	--blockquote: lch(70% 75 80 / 10%);
-	--border: lch(10% 80 80);
 	--link: lch(30% 85 80 / 10%);
 	--markup: lch(70% 80 80);
 	--shadow: lch(60% 80 80);
@@ -128,7 +121,6 @@
 
 [data-theme="09"] {
 	--blockquote: lch(70% 75 60 / 10%);
-	--border: lch(10% 85 60);
 	--hover: lch(40% 85 60);
 	--link: lch(30% 85 60 / 10%);
 	--markup: lch(60% 85 60);
@@ -139,7 +131,6 @@
 
 [data-theme="10"] {
 	--blockquote: lch(70% 75 40 / 10%);
-	--border: lch(10% 90 40);
 	--link: lch(30% 85 40 / 10%);
 	--markup: lch(35% 90 40);
 	--shadow: lch(25% 90 40);
@@ -149,7 +140,6 @@
 
 [data-theme="11"] {
 	--blockquote: lch(70% 75 350 / 10%);
-	--border: lch(10% 85 350);
 	--link: lch(30% 85 350 / 10%);
 	--markup: lch(20% 85 350);
 	--shadow: lch(10% 85 350);
@@ -159,7 +149,6 @@
 
 [data-theme="12"] {
 	--blockquote: lch(70% 75 310 / 10%);
-	--border: lch(10% 85 310);
 	--link: lch(30% 85 310 / 10%);
 	--markup: lch(30% 85 310);
 	--shadow: lch(20% 85 310);
@@ -178,9 +167,9 @@ html {
 body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	border: 1px solid var(--border);
 	background: var(--body);
-	border-radius: 1px;
+	border: 1px solid lch(from var(--shadow) 50 c h);
+		border-radius: 2px;
 	box-shadow: 0px var(--space-3xs) var(--space-s) calc(-1 * var(--space-3xs)) var(--shadow);
 	color: var(--text);
 	display: grid;
@@ -259,7 +248,7 @@ figure {
 	& img,
 	& .kg-width-wide,
 	& .kg-width-full {
-		border-radius: 1px;
+		border-radius: 2px;
 		height: auto;
 		width: 100%;
 	}
@@ -349,21 +338,17 @@ h1,
 			}
 			
 			& blockquote {
+				border: 1px solid lch(from var(--blockquote) 40 c h);
+					border-radius: 2px;
 				background: var(--blockquote);
 				margin: var(--space-s) 0 var(--space-s) 0;
 				padding: var(--space-m) var(--space-l);
 			}
 			
 			& code {
+				background: var(--code);
 				font-family: var(--font);
 				font-weight: normal;
-			}
-			
-			& :not(pre) > code::before,
-			& :not(pre) > code::after {
-				color: var(--markup);
-				content: "`";
-				display: inline;
 			}
 			
 			& em,
@@ -443,9 +428,11 @@ h1,
 			}
 			
 			& pre {
-				border: 2px dashed var(--markup);
+				border: 1px solid lch(from var(--code) 80 c h);
+					border-radius: 2px;
+				background: var(--code);
 				margin: var(--space-s) 0 var(--space-s) 0;
-				padding: 2ch 2ch 2ch 2ch;
+				padding: var(--space-m) var(--space-l);
 			}
 			
 			& s {

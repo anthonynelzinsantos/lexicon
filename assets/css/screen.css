@@ -161,7 +161,7 @@
 [data-theme="12"] {
 	--blockquote: lch(95% 5 310);
 	--hover: lch(10% 85 310);
-	--link: lch(30% 85 310);
+	--link: lch(80% 30 310);
 	--markup: lch(20% 85 310);
 	--shadow: lch(20% 85 310);
 	
@@ -281,6 +281,10 @@ h3,
 h1,
 .h1 {
 	text-transform: uppercase;
+}
+
+.markup {
+	color: var(--markup) !important;
 }
 
 #header {

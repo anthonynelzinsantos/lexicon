@@ -6,7 +6,7 @@
 			{{#post}}<h1 class="title">{{title}}</h1>{{/post}}
 			
 			<div class="deck">
-				{{#get "posts" limit="all"}}{{plural pagination.total empty="0 billet" singular="% billet" plural="% billets"}}{{/get}}
+				{{#get "posts" limit="all"}}{{plural pagination.total empty="No post" singular="% post" plural="% posts"}}{{/get}}
 			</div>
 		</header>
 		

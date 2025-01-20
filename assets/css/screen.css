@@ -49,7 +49,7 @@
 
 [data-theme="01"] {
 	--color-border: lch(10% 80 300);
-	--color-hover: lch(10% 80 300);
+	--color-link: lch(30% 85 300 / 10%);
 	--color-markup: lch(30% 80 300);
 	--color-shadow: lch(20% 80 300);
 	
@@ -58,7 +58,7 @@
 
 [data-theme="02"] {
 	--color-border: lch(10% 80 285);
-	--color-hover: lch(15% 80 285);
+	--color-link: lch(30% 85 285 / 10%);
 	--color-markup: lch(35% 80 285);
 	--color-shadow: lch(25% 80 285);
 	
@@ -67,7 +67,7 @@
 
 [data-theme="03"] {
 	--color-border: lch(10% 55 260);
-	--color-hover: lch(30% 55 260);
+	--color-link: lch(30% 85 260 / 10%);
 	--color-markup: lch(50% 55 260);
 	--color-shadow: lch(40% 55 260);
 	
@@ -76,7 +76,7 @@
 
 [data-theme="04"] {
 	--color-border: lch(10% 40 205);
-	--color-hover: lch(40% 40 205);
+	--color-link: lch(30% 85 205 / 10%);
 	--color-markup: lch(60% 40 205);
 	--color-shadow: lch(50% 40 205);
 	
@@ -85,7 +85,7 @@
 
 [data-theme="05"] {
 	--color-border: lch(10% 50 165);
-	--color-hover: lch(40% 50 165);
+	--color-link: lch(30% 85 165 / 10%);
 	--color-markup: lch(60% 50 165);
 	--color-shadow: lch(50% 50 165);
 	
@@ -94,7 +94,7 @@
 
 [data-theme="06"] {
 	--color-border: lch(10% 70 140);
-	--color-hover: lch(40% 70 140);
+	--color-link: lch(30% 85 140 / 10%);
 	--color-markup: lch(60% 70 140);
 	--color-shadow: lch(50% 70 140);
 	
@@ -103,7 +103,7 @@
 
 [data-theme="07"] {
 	--color-border: lch(10% 75 115);
-	--color-hover: lch(45% 75 115);
+	--color-link: lch(30% 85 115 / 10%);
 	--color-markup: lch(65% 75 115);
 	--color-shadow: lch(55% 75 115);
 	
@@ -112,7 +112,7 @@
 
 [data-theme="08"] {
 	--color-border: lch(10% 80 80);
-	--color-hover: lch(50% 80 80);
+	--color-link: lch(30% 85 80 / 10%);
 	--color-markup: lch(70% 80 80);
 	--color-shadow: lch(60% 80 80);
 	
@@ -121,7 +121,7 @@
 
 [data-theme="09"] {
 	--color-border: lch(10% 85 60);
-	--color-hover: lch(40% 85 60);
+	--color-link: lch(30% 85 60 / 10%);
 	--color-markup: lch(60% 85 60);
 	--color-shadow: lch(50% 85 60);
 	
@@ -130,7 +130,7 @@
 
 [data-theme="10"] {
 	--color-border: lch(10% 90 40);
-	--color-hover: lch(15% 90 40);
+	--color-link: lch(30% 85 40 / 10%);
 	--color-markup: lch(35% 90 40);
 	--color-shadow: lch(25% 90 40);
 	
@@ -139,7 +139,7 @@
 
 [data-theme="11"] {
 	--color-border: lch(10% 85 350);
-	--color-hover: lch(10% 85 350);
+	--color-link: lch(30% 85 350 / 10%);
 	--color-markup: lch(20% 85 350);
 	--color-shadow: lch(10% 85 350);
 	
@@ -148,7 +148,7 @@
 
 [data-theme="12"] {
 	--color-border: lch(10% 85 310);
-	--color-hover: lch(10% 85 310);
+	--color-link: lch(30% 85 310 / 10%);
 	--color-markup: lch(30% 85 310);
 	--color-shadow: lch(20% 85 310);
 	
@@ -200,56 +200,38 @@ body {
 
 a {
 	color: inherit;
-	text-decoration: none;
-	transition: color .1s linear, background-color .1s linear;
-}
-
-a::after {
-	background: var(--color-bg);
-	color: var(--color-markup);
-	content: "]";
-}
-
-a::before {
-	background: var(--color-bg);
-	color: var(--color-markup);
-	content: "[";
+	text-decoration: underline;
+		text-decoration-color: var(--color-link);
+		text-decoration-skip-ink: none;
+		text-decoration-thickness: var(--space-2xs);
+		text-underline-offset: calc(-1 * var(--space-3xs));
 }
 
 a.icon {
 	& svg {
-		color: var(--color-markup);
-		fill: var(--color-markup);
-		transition: color .25s linear, transform .25s ease;
+		color: var(--color-theme);
+		fill: var(--color-theme);
+		transition: color .1s linear, transform .1s ease;
 	}
-}
-
-a.icon::after,
-a.icon::before {
-	content: "";
 }
 
 a:focus,
 a:hover {
-	background: var(--color-hover);
-	color: var(--color-bg);
-	
-	& *::after,
-	& *::before {
-		color: var(--color-bg) !important;
-		transition: color .1s linear;
-	}
+	background: var(--color-link);
+	border-bottom: 1px solid var(--color-markup);
+	text-decoration: none;
 }
 
 a.icon:focus,
 a.icon:hover {
 	background: unset;
+	border: none;
 	color: inherit;
 	cursor: pointer;
 	
 	& svg {
-		color: var(--color-hover);
-		fill: var(--color-hover);
+		color: var(--color-markup);
+		fill: var(--color-markup);
 		transform: scale(128%);
 	}
 }
@@ -630,14 +612,14 @@ h1,
 	
 	& .logo {
 		& svg {
-			color: var(--color-markup);
-			fill: var(--color-markup);
+			color: var(--color-theme);
+			fill: var(--color-theme);
 			height: var(--space-2xl);
 			width: var(--space-2xl);
 			
 			&:hover {
-				color: var(--color-hover);
-				fill: var(--color-hover);
+				color: var(--color-markup);
+				fill: var(--color-markup);
 			}
 		}
 	}

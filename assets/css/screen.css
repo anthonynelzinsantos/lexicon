@@ -1,39 +1,7 @@
-@font-face {
-	font-display: swap;
-	font-family: 'Typewriter';
-	font-style: normal;
-	font-weight: normal;
-	src: url('../fonts/JetBrainsMono-Regular.woff2') format("woff2");
-}
-
-@font-face {
-	font-display: swap;
-	font-family: "Typewriter";
-    font-style: italic;
-    font-weight: normal;
-    src: url("../fonts/JetBrainsMono-Italic.woff2") format("woff2");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Typewriter";
-    font-style: normal;
-    font-weight: bold;
-    src: url("../fonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
-}
-
-@font-face {
-	font-display: swap;
-	font-family: "Typewriter";
-    font-style: italic;
-    font-weight: bold;
-    src: url("../fonts/JetBrainsMono-ExtraBoldItalic.woff2") format("woff2");
-}
-
 :root {
-    --font: "Typewriter", monospace;
+    --sans: "Noto Sans", sans-serif;
+    --serif: "Noto Serif", serif;
     --body: lch(96% 5 90);
-    --captions: lch(40% 15 90);
     --code: lch(90% 5 90);
     --text: lch(10% 100 90);
     --space-3xs: clamp(0.25rem, 0.2188rem + 0.1563vw, 0.3125rem);
@@ -185,21 +153,19 @@ body {
 	box-shadow: 0px var(--space-3xs) var(--space-s) calc(-1 * var(--space-3xs)) var(--shadow);
 	color: var(--text);
 	display: grid;
-		grid-gap: var(--space-xl) 0;
 		grid-template-columns: 0 minmax(0, 1fr) 0;
-	font-family: var(--font);
+	font-family: var(--sans);
+	font-optical-sizing: auto;
 	font-size: clamp(1rem, 0.9375rem + 0.3124vw, 1.125rem);
-	font-variant-ligatures: no-common-ligatures;
 	hyphens: auto;
 	line-height: 1.6em;
-	max-width: 900px;
+	max-width: 800px;
 	padding: var(--space-s) var(--space-s) var(--space-s) var(--space-s);
 }
 
 @media screen and (min-width: 768px) {
 	body {
-		grid-gap: var(--space-xl) var(--space-2xs);
-		grid-template-columns: minmax(0, 1fr) minmax(240px, 6.25fr) minmax(0, 1fr);
+		grid-template-columns: minmax(0, 1fr) minmax(0, 6.25fr) minmax(0, 1fr);
 		margin: var(--space-s) var(--space-s) var(--space-s) var(--space-s);
 		padding: var(--space-xl) var(--space-xl) var(--space-xl) var(--space-xl);
 	}
@@ -254,7 +220,7 @@ figure {
 	padding: 0 0 0 0;
 
 	& figcaption {
-		color: var(--captions);
+		font-size: .8em;
 		text-align: right;
 	}
 
@@ -274,6 +240,7 @@ h2,
 h3,
 .h3 {
 	font-size: 1em;
+	font-family: var(--sans);
 	font-weight: normal;
 	margin: 0 0 0 0;
 }
@@ -291,6 +258,7 @@ h1,
 	grid-column: 1 / -1;
 	display: flex;
 		justify-content: space-between;
+	margin: 0 0 var(--space-3xl) 0;
 
 	& .zinzolin {
 		font-weight: 700;
@@ -302,11 +270,12 @@ h1,
 	
 	& .article {
 		display: grid;
-			gap: var(--space-xl) var(--space-2xs);
+			gap: 0 var(--space-2xs);
 			grid-template-columns: 0 minmax(0, 1fr) 0;
 	
 		& .hero {
 			grid-column: 1 / -1;
+			margin: 0 0 var(--space-xl) 0;
 			
 			& img:hover {
 				cursor: zoom-in;
@@ -315,40 +284,23 @@ h1,
 		
 		& .header {
 			grid-column: 2 / -2;
+			margin: 0 0 var(--space-m) 0;
 			text-align: center;
 			
 			& h1 {
-				display: table;
+				font-weight: 900;
 				margin: 0 auto;
-				padding: 0 0 1ch 0;
-				position: relative;
-				overflow: hidden;
-			}
-			
-			& h1::after {
-				color: var(--markup);
-				content: "====================================================================================================";
-				height: 2ch;
-				position: absolute;
-					bottom: 0;
-					left: 0;
-				overflow: hidden;
-				width: 100%;
-				word-break: break-all;
-			}
-			
-			& .deck {
-				color: var(--captions);
 			}
 			
 			& .meta {
-				color: var(--captions);
-				margin: var(--space-2xs) 0 0 0;
+				margin: 0 0 0 0;
 			}
 		}
 		
 		& .content {
+			font-family: var(--serif);
 			grid-column: 2 / -2;
+			margin: 0 0 var(--space-xl) 0;
 			
 			&:first-child {
 				margin-top: 0 !important;
@@ -377,14 +329,6 @@ h1,
 				margin: var(--space-s) 0 var(--space-s) 0;
 			}
 			
-			& h2,
-			& h3 {
-				display: table;
-				padding: 0 0 1ch 0;
-				position: relative;
-				overflow: hidden;
-			}
-			
 			& h2 {
 				margin: var(--space-xl) auto var(--space-3xs) auto;
 				text-transform: uppercase;
@@ -398,19 +342,6 @@ h1,
 				margin: 0 0 var(--space-3xs) 0;
 			}
 			
-			& h2::after,
-			& h3::after {
-				color: var(--markup);
-				content: "----------------------------------------------------------------------------------------------------";
-				height: 2ch;
-				position: absolute;
-					bottom: 0;
-					left: 0;
-				overflow: hidden;
-				width: 100%;
-				word-break: break-all;
-			}
-			
 			& hr {
 				border: none;
 				padding: var(--space-l) 0 var(--space-l) 0;
@@ -419,7 +350,7 @@ h1,
 			
 			& hr::after {
 				color: var(--markup);
-				content: "* * *";
+				content: "⁂";
 			}
 			
 			& mark {
@@ -514,10 +445,6 @@ h1,
 			& .kg-gallery-image img:hover {
 				cursor: zoom-in;
 			}
-			
-			& .footnotes {
-				color: var(--captions);
-			}
 		}
 		
 		& .footer {
@@ -549,36 +476,26 @@ h1,
 	}
 	
 	& .archive {
-		border-top: 1px dashed var(--captions);
+		border-top: 1px solid lch(from var(--text) l c h / 10%);
 		display: flex;
 			gap: var(--space-s);
 			justify-content: space-between;
 		padding: var(--space-2xs) 0 var(--space-2xs) 0;
 			
 			&:last-of-type {
-				border-bottom: 1px dashed var(--captions);
+				border-bottom: 1px solid lch(from var(--text) l c h / 10%);
 			}
 			
 			& h2 {
-				display: block !important;
 				margin: 0 0 0 0 !important;
 				padding: 0 0 0 0 !important;
-				position: inherit !important;
-			}
-			
-			& h2::after {
-				content: "" !important;
-			}
-			
-			& .date {
-				color: var(--captions);
 			}
 	}
 }
 
 #footer {
 	grid-column: 1 / -1;
-	margin: var(--space-l) 0 0 0;
+	margin: var(--space-2xl) 0 0 0;
 	text-align: center;
 	
 	& .navigation {

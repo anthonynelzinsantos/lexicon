@@ -4,9 +4,9 @@
 	<h1 class="title">{{title}}</h1>
 
     <div class="meta">
-    	<time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date locale="en" format="D MMMM Y"}}</time>
-    	<span class="markup">*</span>
     	{{tags}}
+    	<span class="markup">●</span>
+    	<time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYYMMDD"}}</time>
     </div>
 
     {{#if custom_excerpt}}

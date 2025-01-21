@@ -1,9 +1,9 @@
 @font-face {
 	font-display: swap;
-	font-family: "Typewriter";
-    font-style: normal;
-    font-weight: normal;
-    src: url("../fonts/SpaceMono-Regular.woff2") format("woff2");
+	font-family: 'Typewriter';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/JetBrainsMono-Regular.woff2') format("woff2");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
 	font-family: "Typewriter";
     font-style: italic;
     font-weight: normal;
-    src: url("../fonts/SpaceMono-Italic.woff2") format("woff2");
+    src: url("../fonts/JetBrainsMono-Italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     font-family: "Typewriter";
     font-style: normal;
     font-weight: bold;
-    src: url("../fonts/SpaceMono-Bold.woff2") format("woff2");
+    src: url("../fonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
 }
 
 @font-face {
@@ -27,7 +27,7 @@
 	font-family: "Typewriter";
     font-style: italic;
     font-weight: bold;
-    src: url("../fonts/SpaceMono-BoldItalic.woff2") format("woff2");
+    src: url("../fonts/JetBrainsMono-ExtraBoldItalic.woff2") format("woff2");
 }
 
 :root {
@@ -180,7 +180,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	background: var(--body);
-	border: 1px solid lch(from var(--shadow) 10 100 h);
+	border: 1px solid lch(from var(--theme) 10 c h);
 		border-radius: 2px;
 	box-shadow: 0px var(--space-3xs) var(--space-s) calc(-1 * var(--space-3xs)) var(--shadow);
 	color: var(--text);
@@ -191,7 +191,7 @@ body {
 	font-size: clamp(1rem, 0.9375rem + 0.3124vw, 1.125rem);
 	font-variant-ligatures: no-common-ligatures;
 	hyphens: auto;
-	line-height: 1.75em;
+	line-height: 1.6em;
 	max-width: 900px;
 	padding: var(--space-s) var(--space-s) var(--space-s) var(--space-s);
 }
@@ -578,6 +578,7 @@ h1,
 
 #footer {
 	grid-column: 1 / -1;
+	margin: var(--space-l) 0 0 0;
 	text-align: center;
 	
 	& .navigation {

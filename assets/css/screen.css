@@ -182,8 +182,8 @@ a {
 	text-decoration: underline;
 		text-decoration-color: lch(from var(--link) l c h / 50%);
 		text-decoration-skip-ink: none;
-		text-decoration-thickness: var(--space-2xs);
-		text-underline-offset: calc(-1 * var(--space-3xs));
+		text-decoration-thickness: var(--space-3xs);
+		text-underline-offset: 0;
 }
 
 a:focus,
@@ -258,7 +258,7 @@ h1,
 	grid-column: 1 / -1;
 	display: flex;
 		justify-content: space-between;
-	margin: 0 0 var(--space-3xl) 0;
+	margin: 0 0 var(--space-xl) 0;
 
 	& .zinzolin {
 		font-weight: 700;
@@ -312,6 +312,12 @@ h1,
 				background: var(--blockquote);
 				margin: var(--space-s) 0 var(--space-s) 0;
 				padding: var(--space-m) var(--space-l);
+				
+				& p:last-of-type {
+					font-size: small;
+					font-weight: bold;
+					text-align: right;
+				}
 			}
 			
 			& code {
@@ -330,6 +336,7 @@ h1,
 			}
 			
 			& h2 {
+				font-weight: 600;
 				margin: var(--space-xl) auto var(--space-3xs) auto;
 				text-transform: uppercase;
 			}

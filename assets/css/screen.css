@@ -1,6 +1,5 @@
 :root {
-    --sans: "Noto Sans", sans-serif;
-    --serif: "Noto Serif", serif;
+    --font: "Inter", sans-serif;
     --body: lch(96% 5 90);
     --code: lch(90% 5 90);
     --text: lch(10% 100 90);
@@ -154,7 +153,8 @@ body {
 	color: var(--text);
 	display: grid;
 		grid-template-columns: 0 minmax(0, 1fr) 0;
-	font-family: var(--sans);
+	font-family: var(--font);
+		font-feature-settings: 'liga' 1, 'calt' 1, 'cv01' 1, 'cv05' 1, 'cv11' 1, 'ss03' 1, 'zero' 1;
 	font-optical-sizing: auto;
 	font-size: clamp(1rem, 0.9375rem + 0.3124vw, 1.125rem);
 	hyphens: auto;
@@ -240,7 +240,6 @@ h2,
 h3,
 .h3 {
 	font-size: 1em;
-	font-family: var(--sans);
 	font-weight: normal;
 	margin: 0 0 0 0;
 }
@@ -298,7 +297,6 @@ h1,
 		}
 		
 		& .content {
-			font-family: var(--serif);
 			grid-column: 2 / -2;
 			margin: 0 0 var(--space-xl) 0;
 			
@@ -380,7 +378,6 @@ h1,
 			
 			& p + p {
 				margin: var(--space-s) 0 0 0;
-				text-indent: 4ch;
 			}
 			
 			& pre {
@@ -405,8 +402,12 @@ h1,
 				line-height: 1;
 			}
 			
+			& sub {
+				font-feature-settings: 'subs' 1;
+			}
+			
 			& sup {
-				vertical-align: baseline;
+				font-feature-settings: 'sups' 1;
 			}
 			
 			& table {
@@ -431,21 +432,13 @@ h1,
 			}
 			
 			& ul {
-				margin: var(--space-s) 0 var(--space-s) 0;
-				padding: 0 0 0 min(4vw, 4ch);
+				list-style-position: inside;
+				list-style-type: disc;
+				margin: var(--space-s) 0 var(--space-s) var(--space-s);
+				padding: 0 0 0 0;
 				
-				& ul {
-					margin: 0 0 0 0;
-				}
-				
-				& li {
-					list-style-type: none;
-				}
-				
-				& li::before {
+				& li::marker {
 					color: var(--markup);
-					content: "-";
-					margin: 0 1ch 0 0;
 				}
 			}
 			

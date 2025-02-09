@@ -506,13 +506,13 @@ h1,
 		text-transform: uppercase;
 	
 		& ul {
+			display: flex;
+				flex-direction: row wrap;
+				gap: var(--space-2xs) var(--space-xs);
+				justify-content: center;
 			list-style-type: none;
 			margin: 0 0 0 0;
 			padding: 0 0 0 0;
-			
-			& li {
-				display: inline;
-			}
 		}
 	}
 	
@@ -527,7 +527,7 @@ h1,
 	
 	& .channels {
 		display: flex;
-			gap: var(--space-s);
+			gap: var(--space-2xs) var(--space-xs);
 			justify-content: center;
 		margin: var(--space-m) 0 0 0;
 	}

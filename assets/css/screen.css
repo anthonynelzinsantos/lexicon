@@ -253,6 +253,19 @@ h1,
 	color: var(--markup) !important;
 }
 
+& sub,
+& sup {
+	line-height: 1;
+}
+
+& sub {
+	font-feature-settings: 'subs' 1;
+}
+
+& sup {
+	font-feature-settings: 'sups' 1;
+}
+
 #header {
 	grid-column: 1 / -1;
 	display: flex;
@@ -319,11 +332,6 @@ h1,
 				font-weight: normal;
 			}
 			
-			& em,
-			& i {
-				font-style: italic;
-			}
-			
 			& figure {
 				margin: var(--space-s) 0 var(--space-s) 0;
 			}
@@ -387,24 +395,6 @@ h1,
 				text-decoration-color: var(--markup);
 			}
 			
-			& strong,
-			& b {
-				font-weight: bold;
-			}
-			
-			& sub,
-			& sup {
-				line-height: 1;
-			}
-			
-			& sub {
-				font-feature-settings: 'subs' 1;
-			}
-			
-			& sup {
-				font-feature-settings: 'sups' 1;
-			}
-			
 			& table {
 				border-collapse: collapse;
 				margin: var(--space-s) 0 var(--space-s) 0;
@@ -454,6 +444,10 @@ h1,
 		}
 		
 		& .tags {
+			display: flex;
+				justify-content: center;
+				flex-flow: row wrap;
+				gap: var(--space-2xs) var(--space-xs);
 			grid-column: 2 / -2;
 			margin: var(--space-m) 0 0 0;
 		}

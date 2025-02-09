@@ -1,7 +1,7 @@
 {{!< default}}
 
 <main id="main">
-	<article class="article {{post_class}}">
+	<div class="article {{post_class}}">
 		<header class="header">
 			{{#post}}<h1 class="title">{{title}}</h1>{{/post}}
 			
@@ -17,5 +17,13 @@
                 {{/foreach}}
             {{/get}}
 		</section>
-	</article>
+		
+		<section class="tags">
+		{{#get "tags" limit="all" include="count.posts"}}
+			{{#foreach tags}}
+				<a href="{{ url }}" data-theme="{{date format="MM"}}">{{ name }}<sup>{{ count.posts }}</sup></h2></a>
+			{{/foreach}}
+		{{/get}}
+		</section>
+	</div>
 </main>

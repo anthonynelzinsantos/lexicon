@@ -453,6 +453,11 @@ h1,
 			}
 		}
 		
+		& .tags {
+			grid-column: 2 / -2;
+			margin: var(--space-m) 0 0 0;
+		}
+		
 		.navigation {
 			display: flex;
 				gap: var(--space-s);

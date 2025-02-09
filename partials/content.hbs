@@ -17,7 +17,7 @@
     	{{ tags limit="1" }}
     	<span class="sep">⁋</span>
     	{{# if tags.[1] }}
-    		{{ tags from="2" }}
+    		{{ tags from="2" separator=" · " }}
     		<span class="sep">⁋</span>
     	{{/ if }}
     	<time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYYMMDD"}}</time>

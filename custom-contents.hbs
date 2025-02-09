@@ -21,7 +21,7 @@
 		<section class="tags">
 		{{#get "tags" limit="all" include="count.posts"}}
 			{{#foreach tags}}
-				<a href="{{ url }}" data-theme="{{date format="MM"}}">{{ name }}<sup>{{ count.posts }}</sup></h2></a>
+				<a href="{{url}}" title="">{{name}}<sup>{{count.posts}}</sup></h2></a>
 			{{/foreach}}
 		{{/get}}
 		</section>

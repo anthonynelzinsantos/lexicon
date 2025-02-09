@@ -190,14 +190,13 @@ a:focus,
 a:hover {
 	background: var(--link);
 	color: var(--markup);
-	text-decoration: none;
+	text-decoration-color: var(--link);
 }
 
 a.icon {
 	& svg {
 		color: var(--hover);
 		fill: var(--hover);
-		transition: color .1s linear, transform .1s ease;
 	}
 	
 	&:focus,
@@ -210,7 +209,8 @@ a.icon {
 		& svg {
 			color: var(--markup);
 			fill: var(--markup);
-			transform: scale(128%);
+			transform: scale(124%);
+				transform-origin: 50% 33%;
 		}
 	}
 }

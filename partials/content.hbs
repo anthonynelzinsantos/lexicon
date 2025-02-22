@@ -13,13 +13,19 @@
 </section>
 
 <footer class="footer">
-	{{tags limit="1"}}
-	<span class="sep">⁋</span>
-	{{#if tags.[1]}}
-		{{tags from="2" separator=" · "}}
-		<span class="sep">⁋</span>
-	{{/if}}
-	<time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYYMMDD"}}</time>
+	<div class="meta">
+    	{{tags limit="1"}}
+    	<span class="sep">⁋</span>
+    	{{#if tags.[1]}}
+    		{{tags from="2" separator=" · "}}
+    		<span class="sep">⁋</span>
+    	{{/if}}
+    	<time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYYMMDD"}}</time>
+    </div>
+    
+    <div class="cta content">
+    	<p><b>Do you have thoughts to share?</b> Feel free to <a href="mailto:anthony@nelzin.fr">get in touch</a>! Subscribe to <a href="/#/portal" title="Subscribe to the newsletter">the newsletter</a> or <a href="/rss/" title="Subscribe to the RSS feed">the RSS feed</a> to never miss an update. You can also follow <i>Z1NZ0L1N</i> on <a href="https://bsky.app/profile/z1nz0l1n.com" title="Follow on Bluesky">Bluesky</a> or <a href="https://mastodon.social/@z1nz0l1n" title="Follow on Mastodon">Mastodon</a>. Go to <a href="/archive/" title="Read Z1NZ0L1N’s archive">the archive</a> for more of my posts or to <a href="/blogroll/" title="Read Z1NZ0L1N’s blogroll">the blogroll</a> for other interesting reads. If you enjoy my writing and would like to support it, <a href="https://ko-fi.com/z1nz0l1n" title="Support on Ko-fi">buying me a cup of coffee</a> would be very much appreciated.</p>
+    </div>
 </footer>
 
  <nav class="navigation">

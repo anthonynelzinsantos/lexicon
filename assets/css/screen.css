@@ -136,7 +136,8 @@
 }
 
 :root {
-    --font: "InterVariable", sans-serif;
+    --copy: var(--gh-font-body, "InterVariable"), sans-serif;
+    --headings: var(--gh-font-heading, "InterVariable"), sans-serif;
     --body: lch(96% 5 90);
     --code: lch(90% 5 90);
     --text: lch(10% 100 90);
@@ -167,7 +168,7 @@ body {
 		border-radius: 2px;
 	box-shadow: 0px var(--space-3xs) var(--space-s) calc(-1 * var(--space-3xs)) var(--shadow);
 	color: var(--text);
-	font-family: var(--font);
+	font-family: var(--copy);
 		font-feature-settings: 'liga' 1, 'calt' 1, 'cv01' 1, 'cv05' 1, 'cv11' 1, 'ss03' 1, 'zero' 1;
 	font-optical-sizing: auto;
 	font-size: clamp(1rem, 0.9375rem + 0.3124vw, 1.125rem);
@@ -245,6 +246,7 @@ h2,
 .h2,
 h3,
 .h3 {
+	font-family: var(--headings);
 	font-size: 1em;
 	font-weight: normal;
 	margin: 0 0 0 0;

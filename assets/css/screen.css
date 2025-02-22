@@ -1,3 +1,11 @@
+@font-face {
+	font-display: swap;
+	font-family: "Forma";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/Forma.woff2") format("woff2");
+}
+
 [data-theme="01"] {
 	--blockquote: lch(95% 5 300);
 	--hover: lch(10% 80 300);
@@ -120,7 +128,7 @@
 }
 
 :root {
-    --font: "Inter", sans-serif;
+    --font: "Forma", sans-serif;
     --body: lch(96% 5 90);
     --code: lch(90% 5 90);
     --text: lch(10% 100 90);
@@ -151,29 +159,19 @@ body {
 		border-radius: 2px;
 	box-shadow: 0px var(--space-3xs) var(--space-s) calc(-1 * var(--space-3xs)) var(--shadow);
 	color: var(--text);
-	display: grid;
-		grid-template-columns: 0 minmax(0, 1fr) 0;
 	font-family: var(--font);
-		font-feature-settings: 'liga' 1, 'calt' 1, 'cv01' 1, 'cv05' 1, 'cv11' 1, 'ss03' 1, 'zero' 1;
+		font-feature-settings: 'liga' 1, 'calt' 1, 'ss04' 1, 'ss06' 1, 'zero' 1;
 	font-optical-sizing: auto;
 	font-size: clamp(1rem, 0.9375rem + 0.3124vw, 1.125rem);
 	hyphens: auto;
 	line-height: 1.6em;
-	max-width: 800px;
-	padding: var(--space-s) var(--space-s) var(--space-s) var(--space-s);
+	margin: var(--space-s) var(--space-s) var(--space-s) var(--space-s);
+	padding: var(--space-xl) var(--space-m) var(--space-xl) var(--space-m);
 }
 
 @media screen and (min-width: 768px) {
 	body {
-		grid-template-columns: minmax(0, 1fr) minmax(0, 6.25fr) minmax(0, 1fr);
-		margin: var(--space-s) var(--space-s) var(--space-s) var(--space-s);
 		padding: var(--space-xl) var(--space-xl) var(--space-xl) var(--space-xl);
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	body {
-		margin: var(--space-3xl) auto var(--space-3xl) auto;
 	}
 }
 
@@ -215,6 +213,16 @@ a.icon {
 	}
 }
 
+b, strong {
+	font-variation-settings: 'wght' 600;
+	font-weight: normal;
+}
+
+em, i {
+	font-style: normal;
+	font-variation-settings: 'slnt' -11;
+}
+
 figure {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
@@ -253,40 +261,32 @@ h1,
 	color: var(--markup) !important;
 }
 
-& sub,
-& sup {
+sub,
+sup {
 	line-height: 1;
 }
 
-& sub {
+sub {
 	font-feature-settings: 'subs' 1;
 }
 
-& sup {
+sup {
 	font-feature-settings: 'sups' 1;
 }
 
 #header {
-	grid-column: 1 / -1;
 	display: flex;
 		justify-content: space-between;
 	margin: 0 0 var(--space-2xl) 0;
 
 	& .zinzolin {
-		font-weight: 900;
+		font-variation-settings: 'wght' 900;
 	}
 }
 
 #main {
-	grid-column: 1 / -1;
-	
 	& .article {
-		display: grid;
-			gap: 0 var(--space-2xs);
-			grid-template-columns: 0 minmax(0, 1fr) 0;
-	
 		& .hero {
-			grid-column: 1 / -1;
 			margin: 0 0 var(--space-xl) 0;
 			
 			& img:hover {
@@ -295,18 +295,19 @@ h1,
 		}
 		
 		& .header {
-			grid-column: 2 / -2;
-			margin: 0 0 var(--space-s) 0;
+			margin: 0 auto var(--space-s) auto;
+			max-width: 66ch;
 			text-align: center;
 			
 			& h1 {
-				font-weight: 800;
+				font-variation-settings: 'wght' 800;
 				margin: 0 auto;
 			}
 		}
 		
 		& .content {
-			grid-column: 2 / -2;
+			margin: 0 auto;
+			max-width: 60ch;
 			
 			&:first-child {
 				margin-top: 0 !important;
@@ -321,15 +322,19 @@ h1,
 				
 				& p:last-of-type {
 					font-size: small;
-					font-weight: bold;
+					font-variation-settings: 'wght' 600;
 					text-align: right;
+					
+					& em, i {
+						font-style: normal;
+						font-variation-settings: 'slnt' -11, 'wght' 600;
+					}
 				}
 			}
 			
 			& code {
 				background: var(--code);
-				font-family: var(--font);
-				font-weight: normal;
+				font-family: monospace;
 			}
 			
 			& figure {
@@ -337,7 +342,7 @@ h1,
 			}
 			
 			& h2 {
-				font-weight: 600;
+				font-variation-settings: 'wght' 600;
 				margin: var(--space-xl) auto var(--space-3xs) auto;
 				text-transform: uppercase;
 			}
@@ -434,7 +439,6 @@ h1,
 		
 		& .footer {
 			font-size: small;
-			grid-column: 2 / -2;
 			margin: var(--space-m) 0 0 0;
 			text-align: right;
 			
@@ -448,7 +452,6 @@ h1,
 				justify-content: center;
 				flex-flow: row wrap;
 				gap: var(--space-2xs) var(--space-xs);
-			grid-column: 2 / -2;
 			margin: var(--space-m) 0 0 0;
 		}
 		
@@ -457,7 +460,6 @@ h1,
 				gap: var(--space-s);
 				flex-flow: row wrap;
 				justify-content: space-between;
-			grid-column: 1 / -1;
 			margin: var(--space-2xl) 0 0 0;
 			
 			& .next,
@@ -469,12 +471,6 @@ h1,
 			& .next {
 				text-align: right;
 			}
-		}
-	}
-	
-	@media screen and (min-width: 768px) {
-		& .article {
-			grid-template-columns: minmax(0, 1fr) minmax(360px, 6.25fr) minmax(0, 1fr);
 		}
 	}
 	
@@ -497,7 +493,6 @@ h1,
 }
 
 #footer {
-	grid-column: 1 / -1;
 	margin: var(--space-2xl) 0 0 0;
 	text-align: center;
 	
